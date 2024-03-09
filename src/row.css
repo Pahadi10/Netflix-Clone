@@ -1,0 +1,41 @@
+.row-of-cards-box {
+    margin-bottom: 20px;
+    position: relative; 
+}
+
+.row-of-cards-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;     
+    scrollbar-width: none; 
+    position: relative;
+}
+
+.row-heading{
+    padding-left: 20px;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .row-heading{
+        padding-left: 20px;
+        font-size: 1.6rem;
+    }
+
+    .row-of-cards-container{
+        padding-left: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+
+    .row-heading{
+        padding-left: 10px;
+        font-size: 1.2rem;
+    }
+
+    .row-of-cards-container{
+        padding-left: 10px;
+    }
+}

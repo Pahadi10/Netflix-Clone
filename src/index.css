@@ -1,0 +1,387 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'NetflixSans';
+  src: url('./fonts/netflix-sans-font/NetflixSans-Regular.woff2') format('woff2'),
+    url('./fonts/netflix-sans-font/NetflixSans-Bold.woff2') format('woff2');
+  /* Add more src declarations for different font weights or styles if needed */
+  font-weight: regular;
+  font-style: normal;
+}
+
+
+:root {
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000000;
+  font-family: 'NetflixSans', sans-serif;
+}
+
+
+.home-page {
+  background-image:
+    linear-gradient(to top, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 1) 100%),
+    url('./assets/loginPage/background-img.jpg');
+  background-color: #000000;
+  height: 105vh;
+  background-position: center;
+  background-size: 123%;
+  /* This ensures the background covers 100% of the parent element */
+  background-repeat: no-repeat;
+  /* Prevents repeating the background */
+}
+
+.navBar-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 26%;
+}
+
+.nav-logo {
+  width: 14.2%;
+  height: auto;
+}
+
+.lang-drop {
+  background-color: transparent;
+  border: 1px solid rgba(202, 201, 199, 0.386);
+  height: 34px;
+}
+
+.sign-in-button {
+  font-weight: 700;
+  height: 30px;
+}
+
+.navBar {
+  margin-top: 4px;
+}
+
+.home-content {
+  font-family: 'NetflixSans', sans-serif;
+  text-align: center;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  font-weight: 1000;
+}
+
+.home-content h2 {
+  font-size: 1.6rem;
+  padding-top: 2px;
+}
+
+.home-content h3 {
+  font-size: 1.3rem;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+
+.email-input {
+  width: 46%;
+  /* Adjust width as needed */
+  height: 23.5%;
+  /* Adjust height as needed */
+  background-color: hsla(0, 0%, 100%, 0.034);
+}
+
+.email-label {
+  color: rgba(255, 255, 255, 0.664) !important;
+}
+
+.email-notched-outline {
+  border-color: rgba(255, 255, 255, 0.384) !important;
+  border-radius: 4px !important;
+}
+
+.email-error-outline {
+  border-color: red !important;
+  /* Change border color to red when there is an error */
+}
+
+
+
+.getStarted {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 1000;
+  background-color: red;
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 55px;
+  margin-left: 10px;
+  border-radius: 4px;
+}
+
+.login-bg {
+  background-image:
+    linear-gradient(to top, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0.3) 20%, rgba(0, 0, 0, 1) 200%),
+    url('./assets/loginPage/background-img.jpg');
+  background-color: #000000;
+  height: 130vh;
+  background: position 5px;
+  ;
+  background-repeat: no-repeat;
+  /* Prevents repeating the background */
+
+}
+
+.logo-div {
+  position: absolute;
+}
+
+.nav-logo {
+  position: relative;
+  margin-left: 5px;
+  left: 15px;
+  width: 16%;
+}
+
+.sign-in-div {
+
+  height: 110vh;
+  background-color: hsla(0, 0%, 0%, 0.671);
+  width: 34%;
+  border-radius: 5px;
+  margin-top: 7%;
+}
+
+
+.login-form {
+  width: 65%;
+  color: white;
+}
+
+.sign-in-text {
+  font-size: 2rem;
+  font-weight: 1000;
+  margin-left: -45%;
+  margin-top: 14%;
+  padding-bottom: 5%;
+}
+
+.email-inp,
+.password-inp {
+  padding: 13px;
+  color: white;
+  width: 105%;
+  background: #333333;
+  border-radius: 5px;
+}
+
+.email-inp::placeholder,
+.password-inp::placeholder {
+  color: hsla(0, 1%, 67%, 0.76);
+}
+
+.login-button {
+  width: 105%;
+  background-color: red;
+  margin-top: 19px;
+  padding: 13px;
+  border-radius: 5px;
+}
+
+.remember-me-div {
+  color: hsl(0, 1%, 67%);
+}
+
+.new-to-text {
+  color: hsl(0, 1%, 67%);
+}
+
+.details-text-login {
+  font-size: 13px;
+}
+
+.learn-more-text {
+  padding-top: 5px;
+  font-size: 12px;
+}
+
+.blue-underline-text {
+  color: #0080ff;
+
+}
+
+.singup-button:hover,
+.blue-underline-text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.nav-logo {
+  width: 14%;
+  margin-right: 5%;
+}
+
+.nav-bar-home-logo {
+  width: 120px;
+  margin-top: -12px;
+  left: 2%;
+  height: 50px;
+  cursor: pointer;
+  max-width: 120px;
+}
+
+.search-icon-nav {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.avatar-nav {
+  width: 2.5rem;
+  /* position: fixed; */
+  margin-top: -10px;
+  cursor: pointer;
+}
+
+.right-nav {
+  margin-top: 9px;
+  width: auto;
+}
+
+.nav-bar-home {
+  position: fixed;
+  top: 0;
+  padding: 20px;
+  height: 60px;
+  z-index: 100;
+  width: 100%;
+
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
+
+.left-nav-part {
+  margin-left: 1%;
+  display: flex;
+  /* background: #994f4f; */
+  gap: 5%;
+  width: 50%;
+}
+
+.right-nav-part {
+  display: flex;
+  gap: 15px;
+  padding-right: 20px;
+}
+
+.account-option {
+  cursor: pointer;
+  margin-bottom: 5px;
+  width: 100%;
+  padding: 2px;
+}
+
+.logout-option {
+  cursor: pointer;
+  padding: 2px;
+}
+
+.avatar-menu {
+  margin-top: 8px;
+}
+
+.search-box {
+  background: #333333;
+  padding: 3px;
+  border-radius: 6px;
+}
+
+.nav-black {
+  background: #111;
+}
+
+
+/* REsponsive break points */
+
+@media only screen and (max-width: 768px) {
+
+  /* Home page */
+
+  .home-page {
+    height: 110vh;
+    background-size: 200%;
+    /* This ensures the background covers 100% of the parent element */
+  }
+
+  .navBar {
+    padding-top: 5%;
+  }
+
+  .nav-logo {
+    width: 30%;
+    height: auto;
+  }
+
+  .navBar-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 13%;
+  }
+
+
+
+  /*Login page */
+
+  .login-bg {
+    width: 150vw;
+  }
+
+
+  .logo-div {
+    position: absolute;
+    width: 100%;
+  }
+
+  .nav-logo {
+    position: relative;
+    margin-left: 5px;
+    left: 35px;
+    margin-top: 20px;
+  }
+
+  /* videopage */
+
+  .nav-bar-home {
+    height: 70px;
+  }
+
+}
+
+/* Mobile device */
+
+@media only screen and (max-width: 600px) {
+
+  .search-icon-nav {
+    display: none;
+  }
+
+  /*Login page */
+
+  .login-bg {
+    width: 100vw;
+  }
+
+  .sign-in-div {
+    height: 100vh;
+    background-color: hsla(0, 0%, 0%, 0.671);
+    width: 54%;
+    border-radius: 5px;
+    margin-top: 17%;
+
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .nav-menu{
+    display: none;
+  }
+}
