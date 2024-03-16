@@ -75,7 +75,7 @@ const HomeNav = () => {
             <CiSearch className="search-icon-nav " onClick={() => {setSearch(!search)}}/>
           </div>
           <div className="w-12" ref={avatarRef}>
-            <img src="../src/assets/home/avatar.jpg" className="avatar-nav rounded-md" onClick={() => {setProfile(!profile)}}></img>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png?20201013161117" className="avatar-nav rounded-md" onClick={() => {setProfile(!profile)}}></img>
             {profile && <div className='mt-5 avatar-menu'>
               <ul>
                 <li className="account-option">Account</li>

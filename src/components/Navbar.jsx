@@ -8,7 +8,7 @@ const Navbar = () => {
     <div className="navBar">
       <div className=" navBar-div">
         <img
-          src="../src/assets/loginPage/NetflixLogo.png"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Logonetflix.png/800px-Logonetflix.png"
           className="nav-logo"
         ></img>
        
