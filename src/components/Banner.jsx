@@ -2,12 +2,14 @@ import React from "react";
 import requests from "../requests";
 import axios from "../axios";
 import { useState, useEffect } from "react";
+import { IoIosSkipForward } from "react-icons/io";
 
 const Banner = () => {
   const [movie, setMovie] = useState([]);
   const [movieId, setMovieId] = useState(null);
   // const [youtubeVideoId, setYoutubeVideoId] = useState(null);
   const [playVideo, setPlayVideo] = useState(false);
+  const [bannerFetch, setBannerFetch] = useState(false);
 
   useEffect(() => {
     const fetchNetflixOriginals = async () => {
@@ -52,7 +54,7 @@ const Banner = () => {
     };
 
     fetchNetflixOriginals();
-  }, []);
+  }, [bannerFetch]);
 
   // const fetchYouTubeVideo = async (movieTitle) => {
   //     try {
@@ -76,6 +78,10 @@ const Banner = () => {
     setPlayVideo(!playVideo);
   };
 
+  const bannerHandler = () => {
+    setBannerFetch(!bannerFetch);
+  };
+
   return (
     <header
       className="banner"
@@ -87,14 +93,14 @@ const Banner = () => {
       }}
     >
       {playVideo && (
-        <div className="youtube-video-container absolute" style={{ width: '100%', height: '800px', overflow: 'hidden' }}>
+        <div className="youtube-video-container flex justify-center absolute mt-[-60px]" style={{ width: '100%', height: '800px', overflow: 'hidden' }}>
           <iframe
             title="YouTube Video"
-            width="100%"
-            height="600"
+            width="2000"
+            height="610"
             src={`https://www.youtube.com/embed/${movieId}?autoplay=1&controls=0&autohide=1&showinfo=0&rel=0&modestbranding=1&vq=hd1080`}
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-            allowfullscreen = "allowfullscreen"
+            allowFullScreen = "allowFullScreen"
 
           ></iframe>
         </div>
@@ -107,7 +113,9 @@ const Banner = () => {
             movie?.original_title ||
             movie?.original_name}
         </h1>
-        <div className="banner_buttons">
+        <div className="banner_buttons flex justify-between">
+        <div>
+
         {!playVideo? (<button className="banner_button" onClick={handlePlayVideo}>
             Play
           </button> ):(<button className="banner_button" onClick={handlePlayVideo}>
@@ -116,6 +124,11 @@ const Banner = () => {
           }
           
           <button className="banner_button">More Info</button>
+        </div>
+          <div className=""> 
+          <button className="banner_button next_button bg-transparent" onClick={bannerHandler}><IoIosSkipForward /></button>
+          </div>
+
         </div>
         <h1 className="banner_description">
           {truncateDescription(movie?.overview, 200)}

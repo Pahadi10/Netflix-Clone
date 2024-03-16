@@ -1,6 +1,7 @@
 .row-of-cards-box {
     margin-bottom: 20px;
     position: relative; 
+    margin-top: 10px;
 }
 
 .row-of-cards-container {
@@ -9,6 +10,7 @@
     overflow-y: hidden;     
     scrollbar-width: none; 
     position: relative;
+    
 }
 
 .row-heading{

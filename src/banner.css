@@ -1,5 +1,5 @@
 .banner {
-    height: 600px;
+    height: 550px;
     position: relative;
     object-fit: contain;
     color: white;
@@ -51,8 +51,17 @@
 .banner-fadeBottom {
     height: 7.4rem;
     background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.425), #111);
-    margin-top: 292px;
+    margin-top: 247px;
     position: relative;
+}
+
+.next_button{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-right: 2rem;
+    border-radius: 50%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -112,5 +121,9 @@
         margin-top: -67px;
     }
 
+    .next_button{
+        display: none;
+        background: transparent;
+    }
     
 }
