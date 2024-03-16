@@ -49,7 +49,7 @@ const HomeNav = () => {
           {/* left part of nav */}
           <div>
             <img
-              src="../src/assets/loginPage/NetflixLogo.png"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Logonetflix.png/800px-Logonetflix.png"
               className="nav-bar-home-logo"
               alt="Netflix Logo"
             />
@@ -75,7 +75,7 @@ const HomeNav = () => {
             <CiSearch className="search-icon-nav " onClick={() => {setSearch(!search)}}/>
           </div>
           <div className="w-12" ref={avatarRef}>
-            <img src="../src/assets/home/avatar.png" className="avatar-nav rounded-md" onClick={() => {setProfile(!profile)}}></img>
+            <img src="../src/assets/home/avatar.jpg" className="avatar-nav rounded-md" onClick={() => {setProfile(!profile)}}></img>
             {profile && <div className='mt-5 avatar-menu'>
               <ul>
                 <li className="account-option">Account</li>

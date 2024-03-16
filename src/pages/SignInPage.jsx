@@ -63,7 +63,7 @@ const SignInPage = () => {
     <div className="login-bg">
       <Link to="/">
         <button className="logo-div">
-          <img src="../src/assets/loginPage/NetflixLogo.png" className="nav-logo" alt="Netflix Logo" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Logonetflix.png/800px-Logonetflix.png" className="nav-logo" alt="Netflix Logo" />
         </button>
       </Link>
       <div className="flex justify-center">
