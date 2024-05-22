@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, Navigate } from "react-router-dom";
 
 const SignInPage = () => {
@@ -7,8 +7,21 @@ const SignInPage = () => {
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
-
   const [loggedIn, setLoggedIn] = useState(false);
+
+  const generateRandomCredentials = () => {
+    // Generate random email
+    const randomEmail = `random_${Math.random().toString(36).substring(7)}@example.com`;
+    // Generate random password of length between 6 and 10 characters
+    const randomPassword = Math.random().toString(36).substring(2, 8);
+
+    setEmail(randomEmail);
+    setPassword(randomPassword);
+  };
+
+  useEffect(() => {
+    generateRandomCredentials();
+  }, []);
 
   const handleEmailChange = (e) => {
     const { value } = e.target;
@@ -46,14 +59,6 @@ const SignInPage = () => {
   const handleRememberMe = () => {
     setRememberMe(!rememberMe);
   };
-
-  // Check if user is already logged in (based on localStorage)
-  React.useEffect(() => {
-    const user = localStorage.getItem("user");
-    if (user) {
-      setLoggedIn(true);
-    }
-  }, []);
 
   if (loggedIn) {
     return <Navigate to="/home" />;
