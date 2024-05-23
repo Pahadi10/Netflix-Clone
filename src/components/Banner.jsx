@@ -99,6 +99,7 @@ const Banner = () => {
             width="2000"
             height="610"
             src={`https://www.youtube.com/embed/${movieId}?autoplay=1&controls=0&autohide=1&showinfo=0&rel=0&modestbranding=1&vq=hd1080`}
+            style={{ pointerEvents: 'none' }}
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
             allowFullScreen = "allowFullScreen"
 

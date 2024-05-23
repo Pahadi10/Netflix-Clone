@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import { Navigate } from "react-router-dom";
+import Button from '@mui/material/Button';
 
 const MainPageContent = () => {
   const [email, setEmail] = useState("");
@@ -39,38 +40,53 @@ const MainPageContent = () => {
       <h3>
         Ready to watch? Enter your email to create or restart your membership.
       </h3>
-      <TextField
-      sx={{caretColor: "red"}}
-        onChange={handleEmailChange}
-        id="email"
-        label="Email address"
-        variant="outlined"
-        autoComplete="email"
-        minLength="5"
-        maxLength="50"
-        type="email"
-        className="email-input"
-        error={!!emailError}
-        helperText={emailError}
-        InputProps={{
-          style: {
-            color: "white",
-          },
-          classes: {
-            notchedOutline: emailError
-              ? "email-error-outline"
-              : "email-notched-outline",
-          },
-        }}
-        InputLabelProps={{
-          className: "email-label",
-        }}
 
-      />
+      <div className="flex justify-center flex-wrap gap-10">
 
-        <button className="getStarted hover:bg-red-700" onClick={handleSubmit}>
+        <TextField
+          sx={{ caretColor: "red", minWidth: 250 }}
+          onChange={handleEmailChange}
+          id="email"
+          label="Email address"
+          variant="outlined"
+          autoComplete="email"
+          minLength="5"
+          maxLength="50"
+          type="email"
+          className="email-input"
+          error={!!emailError}
+          helperText={emailError}
+          InputProps={{
+            style: {
+              color: "white",
+            },
+            classes: {
+              notchedOutline: emailError
+                ? "email-error-outline"
+                : "email-notched-outline",
+            },
+          }}
+          InputLabelProps={{
+            className: "email-label",
+          }}
+
+        />
+
+        <Button
+          variant="contained"
+          color="primary"
+          className="getStarted"
+          onClick={handleSubmit}
+          sx={{
+              backgroundColor: 'red', // This will apply the red background on hover
+            '&:hover': {
+              backgroundColor: 'red', // This will apply the red background on hover
+            }
+          }}
+        >
           Get Started &gt;
-        </button>
+        </Button>
+      </div>
     </div>
   );
 };

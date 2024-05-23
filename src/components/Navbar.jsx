@@ -18,7 +18,7 @@ const Navbar = () => {
         <option value="Hindi" className="text-black">हिन्दी</option>
       </select>
       <Link to= '/login'>
-      <button className="bg-red-600 rounded-[4px] px-4 sign-in-button">Sign In</button>
+      <button className="bg-red-600 rounded-[4px] px-4 sign-in-button" style={{ whiteSpace: 'nowrap' }}>Sign In</button>
       </Link>
 
         </div>
